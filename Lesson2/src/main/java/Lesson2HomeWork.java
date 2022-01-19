@@ -11,12 +11,6 @@ public class Lesson2HomeWork {
 
     private static void printLiterals() {
 //        вывести на консоль литералы следующих видов:
-
-//        целочисленный 2-й
-//        целочисленный 8-й
-//        целочисленный 10-й
-//        целочисленный 16-й
-
 //        логический
         boolean myBool = false;
         System.out.println(myBool);
@@ -28,6 +22,22 @@ public class Lesson2HomeWork {
 //        символьный
         char mChar = '1';
         System.out.println(mChar);
+
+//        целочисленный 2-й
+        int num = 0b101;
+        System.out.println(num);
+
+//        целочисленный 8-й
+        int numA = 0125;
+        System.out.println(numA);
+
+//        целочисленный 10-й
+        int numB = 658;
+        System.out.println(numB);
+
+//        целочисленный 16-й
+        int numD = 0x15F;
+        System.out.println(numD);
 
 //        литерал типа float
         float f = 1.2f;
