@@ -53,6 +53,7 @@ public class Lesson2 {
      * 2. Дополнительно: сделать проверку если сумма a и b больше чем максимальное значение int то вернуть -1
      **/
     public static int sum(int a, int b) {
+
         return a + b;
     }
 
