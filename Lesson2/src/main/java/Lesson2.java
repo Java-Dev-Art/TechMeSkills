@@ -1,10 +1,12 @@
+import static java.lang.Integer.MAX_VALUE;
+
 public class Lesson2 {
     public static void main(String[] args) {
         //вывод на консоль
         printLiterals();
         //Некоторые тесты для проверки задач.
         System.out.println(sum(100, 200));
-        System.out.println(sum(Integer.MAX_VALUE, Integer.MAX_VALUE));
+        System.out.println(sum(MAX_VALUE, MAX_VALUE));
         System.out.println(max(56, 349));
         System.out.println(calculateHypotenuse(3, 4));
     }
@@ -53,7 +55,10 @@ public class Lesson2 {
      * 2. Дополнительно: сделать проверку если сумма a и b больше чем максимальное значение int то вернуть -1
      **/
     public static int sum(int a, int b) {
-        return a + b;
+        if ((a + b) < MAX_VALUE & (a + b) != -2) {
+            return a + b;
+        }
+        return -1;
     }
 
     /**
