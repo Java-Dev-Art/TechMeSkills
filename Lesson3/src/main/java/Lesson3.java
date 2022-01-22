@@ -82,6 +82,20 @@ public class Lesson3 {
             System.out.println(third);
         }
         System.out.println("");
+        System.out.println("Наименьшее число по модулю");
+        int firstMod = Math.abs(first);
+        int secM = Math.abs(second);
+        int thirdM = Math.abs(third);
+
+        if (secM < firstMod & secM < thirdM) {
+            System.out.println("mod " + secM);
+        }
+        if (thirdM < firstMod & thirdM < secM) {
+            System.out.println("mod " + thirdM);
+        }
+        if (firstMod < secM & firstMod < thirdM) {
+            System.out.println("mod " + firstMod);
+        }
     }
 
     /**
@@ -103,7 +117,7 @@ public class Lesson3 {
     public static void taskFour() {
         System.out.println("Task#4");
         Random random = new Random();
-        int endsWork = random.nextInt(28800);
+        int endsWork = random.nextInt(28801);
         System.out.println("For Petrov " + endsWork);
         System.out.println(endsWork / 3600 + " hours left until the end of work");
         System.out.println("");
@@ -133,7 +147,7 @@ public class Lesson3 {
                 {{"   ", " byte ", " short", " char", " int", " long", " float", " double", " boolean"},
                         {"byte ", " Т", "    НЯ", "   X", "  НЯ", "  НЯ", "    X", "       X", "        X "},
                         {"short ", "Я", "    Т", "    Х", "   НЯ", "   НЯ", "    Х", "     Х", "      Х"},
-                        {"char ", " Х", "    Х", "    Т", "   Я", "    X", "     X", "     X", "      X"},
+                        {"char ", " Я", "    Я", "    Т", "   Я", "    Я", "     Я", "     Я", "      X"},
                         {"int ", "  Я", "    Я", "    Я", "   Т", "    НЯ", "    Х", "     НЯ", "     Х"},
                         {"long ", " Я", "    Я", "    Х", "   Я", "    Т", "     Х", "     Х", "      Х"},
                         {"float ", "X", "    X", "    X", "   Я", "    Я", "     Т", "     НЯ", "     Х"},
@@ -146,6 +160,7 @@ public class Lesson3 {
             System.out.println("");
         }
         System.out.println("");
+
     }
 
     /**
