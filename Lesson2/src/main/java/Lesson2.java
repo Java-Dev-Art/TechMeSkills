@@ -55,7 +55,10 @@ public class Lesson2 {
      * 2. Дополнительно: сделать проверку если сумма a и b больше чем максимальное значение int то вернуть -1
      **/
     public static int sum(int a, int b) {
-        if ((a + b) < MAX_VALUE & (a + b) != -2) {
+        long sumLong = (long) a + b;
+
+        System.out.println("A = " + a + "\nB = " + b + "\nSUM A & B = " + sumLong);
+        if (sumLong < MAX_VALUE) {
             return a + b;
         }
         return -1;
