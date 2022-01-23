@@ -5,7 +5,7 @@ public class FirstTask {
         for (String arg : args) {
             int pars = Integer.parseInt(arg);
 
-            if (pars > 0){
+            if (pars > 0) {
                 count++;
             }
         }
