@@ -58,9 +58,9 @@ public class Lesson2 {
         long sumLong = (long) a + b;
 
         if (sumLong > MAX_VALUE) {
-            return a + b;
+            return -1;
         }
-        return -1;
+        return a + b;
     }
 
     /**
