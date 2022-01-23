@@ -57,11 +57,10 @@ public class Lesson2 {
     public static int sum(int a, int b) {
         long sumLong = (long) a + b;
 
-        System.out.println("A = " + a + "\nB = " + b + "\nSUM A & B = " + sumLong);
-        if (sumLong < MAX_VALUE) {
-            return a + b;
+        if (sumLong > MAX_VALUE) {
+            return -1;
         }
-        return -1;
+        return a + b;
     }
 
     /**
