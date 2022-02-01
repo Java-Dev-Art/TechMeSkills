@@ -38,6 +38,7 @@ public class Lesson5 {
 //            * *        * *
 //              *        *
     private static void taskSecond() {
+        System.out.println("A");
         char[][] taskA = new char[4][4];
         for (int i = 0; i <= taskA.length - 1; i++) {
             for (int j = 0; j <= i; j++) {
@@ -53,12 +54,12 @@ public class Lesson5 {
         System.out.println("B");
         char[][] taskB = new char[4][4];
         for (int i = 0; i <= taskB.length - 1; i++) {
-            for (int j = taskB[i].length - 1; j >= i; j--) {
+            for (int j = i; j >= i; j--) {
                 taskB[j][i] = '*';
             }
         }
         for (int i = 0; i <= taskB.length - 1; i++) {
-            for (int j = 0; j <= i; j++) {
+            for (int j = taskB[i].length - 1; j >= i; j--) {
                 System.out.print(taskB[i][j] + " ");
             }
             System.out.println();
