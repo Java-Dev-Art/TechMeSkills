@@ -7,5 +7,6 @@ public class Main {
         Computer computer = new Computer("Intel", 123, 55689);
         System.out.println(computer.toString());
         computer.on();
+        computer.off();
     }
 }
