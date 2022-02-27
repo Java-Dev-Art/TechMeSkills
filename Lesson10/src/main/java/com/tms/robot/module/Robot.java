@@ -1,5 +1,6 @@
 package com.tms.robot.module;
 
+import com.tms.robot.module.constats.Prices;
 import com.tms.robot.module.foot.IFoot;
 import com.tms.robot.module.hand.IHand;
 import com.tms.robot.module.head.IHead;
@@ -20,13 +21,13 @@ public class Robot implements IHead, IHand, IFoot {
     @Override
     public void onContinental() {
         System.out.println("Модуль установлен");
-        this.price += PRICE_CONTINENTAL;
+        this.price += Prices.CONTINENTAL.getPrice();
     }
 
     @Override
     public void offContinental() {
         System.out.println("Модуль удален");
-        this.price -= PRICE_CONTINENTAL;
+        this.price -= Prices.CONTINENTAL.getPrice();
     }
 
     @Override
@@ -58,13 +59,13 @@ public class Robot implements IHead, IHand, IFoot {
     @Override
     public void sonyOn() {
         System.out.println("Модуль установлен");
-        this.price += PRICE_SONY;
+        this.price += Prices.SONY.getPrice();
     }
 
     @Override
     public void sonyOff() {
         System.out.println("Модуль удален");
-        this.price -= PRICE_SONY;
+        this.price -= Prices.SONY.getPrice();
     }
 
     @Override
@@ -80,48 +81,48 @@ public class Robot implements IHead, IHand, IFoot {
     @Override
     public void onProcess() {
         System.out.println("Модуль установлен");
-        this.price += PRICE_INTEL;
+        this.price += Prices.INTEL.getPrice();
     }
 
     @Override
     public void offProcess() {
         System.out.println("Модуль удален");
-        this.price -= PRICE_INTEL;
+        this.price -= Prices.INTEL.getPrice();
     }
 
     @Override
     public void speakOn() {
         System.out.println("Модуль установлен");
-        this.price += PRICE_JBL;
+        this.price += Prices.JBL.getPrice();
     }
 
     @Override
     public void speakOff() {
         System.out.println("Модуль удален");
-        this.price -= PRICE_JBL;
+        this.price -= Prices.JBL.getPrice();
     }
 
     @Override
     public void listenOn() {
         System.out.println("Модуль установлен");
-        this.price += PRICE_PHILIPS;
+        this.price += Prices.PHILIPS.getPrice();
     }
 
     @Override
     public void listenOff() {
         System.out.println("Модуль удален");
-        this.price -= PRICE_PHILIPS;
+        this.price -= Prices.PHILIPS.getPrice();
     }
 
     @Override
     public void seeOn() {
         System.out.println("Модуль установлен");
-        this.price += PRICE_SAMSUNG;
+        this.price += Prices.SAMSUNG.getPrice();
     }
 
     @Override
     public void seeOff() {
         System.out.println("Модуль установлен");
-        this.price += PRICE_SAMSUNG;
+        this.price += Prices.SAMSUNG.getPrice();
     }
 }
