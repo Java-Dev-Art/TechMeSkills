@@ -11,8 +11,8 @@ public class First {
                      ("/home/artur/TechmeSkills/TechMeSkills/Lesson14/src/main/resources/output.txt"))) {
             String lineText;
             while ((lineText = reader.readLine()) != null) {
-                if (lineReserved(lineText) != "") {
-                    writer.write(lineReserved(lineText) + "\n");
+                if (lineReserved(lineText)) {
+                    writer.write(lineText + "\n");
                 }
             }
         } catch (FileNotFoundException e) {
@@ -22,13 +22,13 @@ public class First {
         }
     }
 
-    public static String lineReserved(String line) {
-        StringBuffer buffer = new StringBuffer(line);
+    public static boolean lineReserved(String line) {
+        StringBuilder buffer = new StringBuilder(line);
         buffer.reverse();
         if (line.equalsIgnoreCase(buffer.toString())) {
-            return line;
+            return true;
         } else {
-            return "";
+            return false;
         }
     }
 }
