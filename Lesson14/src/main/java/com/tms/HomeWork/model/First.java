@@ -8,6 +8,7 @@ public class First {
     private final static String OUTPUT = SOURCE + "output.txt";
     private final static String LENGTH = OUTPUT + "lengthBetween3and5.txt";
     private final static String TEXT = SOURCE + "text.txt";
+    private final static String BLACK = SOURCE + "isBlackList.txt";
 
     public static void main(String[] args) {
         TextFormatter formatter = new TextFormatter();
@@ -27,6 +28,16 @@ public class First {
             while ((lineText = reader.readLine()) != null) {
                 if (formatter.isLengthNorm(lineText)) {
                     writer.write(lineText + "\n");
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try (BufferedReader reader = new BufferedReader(new FileReader(TEXT));
+             BufferedWriter writer = new BufferedWriter(new FileWriter(BLACK))) {
+            while ((lineText = reader.readLine()) != null) {
+                if (formatter.isBlackList(lineText)) {
+                    writer.write(formatter.replace(lineText) + "\n");
                 }
             }
         } catch (IOException e) {
