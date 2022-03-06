@@ -1,4 +1,4 @@
-package com.tmc.module.market;
+package com.tmc.model.market;
 
 import java.util.ArrayList;
 import java.util.List;

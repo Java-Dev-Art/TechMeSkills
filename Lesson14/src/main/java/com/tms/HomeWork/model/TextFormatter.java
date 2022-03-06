@@ -7,6 +7,7 @@ public class TextFormatter {
     private static final String REG = "\\s[а-я]{4}\\s";
     private final Pattern pattern = Pattern.compile(REG);
     private Matcher matcher;
+    private int count = 0;
 
     public boolean isPolidrome(String line) {
         StringBuilder buffer = new StringBuilder(line);
@@ -30,12 +31,14 @@ public class TextFormatter {
     public boolean isBlackList(String line) {
         matcher = pattern.matcher(line);
         while (matcher.find()) {
+            count++;
+            System.out.println("Количество слов не прошедших цензуру :" + count);
             return true;
         }
         return false;
     }
 
     public String replace(String line) {
-        return line.replaceAll(REG, "***** ");
+        return line.replaceAll(REG, " ***** ");
     }
 }

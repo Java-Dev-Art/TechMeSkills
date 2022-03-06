@@ -1,4 +1,4 @@
-package com.tmc.module.market;
+package com.tmc.model.market;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,4 +1,4 @@
-package com.tmc.module.library;
+package com.tmc.model.library;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
