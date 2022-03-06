@@ -3,32 +3,45 @@ package com.tms.HomeWork.model;
 import java.io.*;
 
 public class First {
-    private final static String SOURCE = "/home/artur/TechmeSkills/TechMeSkills/Lesson14/src/main/resources/input.txt";
+    private final static String SOURCE = "/home/artur/TechmeSkills/TechMeSkills/Lesson14/src/main/resources/";
+    private final static String INPUT = SOURCE + "input.txt";
+    private final static String OUTPUT = SOURCE + "output.txt";
+    private final static String LENGTH = OUTPUT + "lengthBetween3and5.txt";
+    private final static String TEXT = SOURCE + "text.txt";
+    private final static String BLACK = SOURCE + "isBlackList.txt";
 
     public static void main(String[] args) {
-        try (BufferedReader reader = new BufferedReader(new FileReader(SOURCE));
-             BufferedWriter writer = new BufferedWriter(new FileWriter
-                     ("/home/artur/TechmeSkills/TechMeSkills/Lesson14/src/main/resources/output.txt"))) {
-            String lineText;
+        TextFormatter formatter = new TextFormatter();
+        String lineText;
+        try (BufferedReader reader = new BufferedReader(new FileReader(INPUT));
+             BufferedWriter writer = new BufferedWriter(new FileWriter(OUTPUT))) {
             while ((lineText = reader.readLine()) != null) {
-                if (lineReserved(lineText) != "") {
-                    writer.write(lineReserved(lineText) + "\n");
+                if (formatter.isPolidrome(lineText)) {
+                    writer.write(lineText + "\n");
                 }
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public static String lineReserved(String line) {
-        StringBuffer buffer = new StringBuffer(line);
-        buffer.reverse();
-        if (line.equalsIgnoreCase(buffer.toString())) {
-            return line;
-        } else {
-            return "";
+        try (BufferedReader reader = new BufferedReader(new FileReader(TEXT));
+             BufferedWriter writer = new BufferedWriter(new FileWriter(LENGTH))) {
+            while ((lineText = reader.readLine()) != null) {
+                if (formatter.isLengthNorm(lineText)) {
+                    writer.write(lineText + "\n");
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try (BufferedReader reader = new BufferedReader(new FileReader(TEXT));
+             BufferedWriter writer = new BufferedWriter(new FileWriter(BLACK))) {
+            while ((lineText = reader.readLine()) != null) {
+                if (formatter.isBlackList(lineText)) {
+                    writer.write(formatter.replace(lineText) + "\n");
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }
