@@ -1,10 +1,10 @@
 package com.tmc.service;
 
-import com.tmc.module.library.Book;
-import com.tmc.module.library.Reader;
-import com.tmc.module.market.Bouquet;
-import com.tmc.module.market.Flower;
-import com.tmc.module.market.FlowerEnum;
+import com.tmc.model.library.Book;
+import com.tmc.model.library.Reader;
+import com.tmc.model.market.Bouquet;
+import com.tmc.model.market.Flower;
+import com.tmc.model.market.FlowerEnum;
 
 import java.util.ArrayList;
 import java.util.List;
