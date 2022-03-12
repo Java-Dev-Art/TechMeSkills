@@ -1,25 +1,27 @@
 package com.tms.HomeWork.model.car;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.ToString;
 
 import java.io.Serializable;
 
-@Builder
 @ToString
 @Getter
+@Setter
+@NoArgsConstructor
 public class Car implements Serializable {
     private static final long serialVersionUID = 1L;
-    @JsonProperty("Марка")
+    @JsonProperty("Mark")
     private String mark;
-    @JsonProperty("Двигатель")
+    @JsonProperty("Motor")
     private Motor motor;
-    @JsonProperty("Бак")
+    @JsonProperty("Cistern")
     private Cistern cistern;
-    @JsonProperty("Скорость")
+    @JsonProperty("Speed")
     private int speed;
-    @JsonProperty("Цена")
+    @JsonProperty("Price")
     private double price;
 }

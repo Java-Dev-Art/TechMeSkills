@@ -1,7 +1,6 @@
 package com.tms.HomeWork.model;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.gson.Gson;
 import com.tms.HomeWork.model.car.Car;
 import com.tms.HomeWork.model.car.Cistern;
 import com.tms.HomeWork.model.car.Motor;
@@ -18,12 +17,22 @@ public class First {
     private final static String SERIAL = SOURCE + "car.dat";
     private final static String JSON = SOURCE + "car.json";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         TextFormatter formatter = new TextFormatter();
         String lineText;
-        Cistern cistern = Cistern.builder().typeFuel("gaz").volume(125.5).build();
-        Motor motor = Motor.builder().numberOfSoils(4).type("Gaz").build();
-        Car car = Car.builder().mark("Volvo").cistern(cistern).motor(motor).price(4522356.52).speed(245).build();
+        Cistern cistern = new Cistern();
+        cistern.setTypeFuel("GAZ");
+        cistern.setVolume(556.3);
+        Motor motor = new Motor();
+        motor.setType("MY");
+        motor.setNumberOfSoils(5);
+        Car car = new Car();
+        car.setCistern(cistern);
+        car.setMotor(motor);
+        car.setPrice(4568.3);
+        car.setSpeed(4656);
+        car.setMark("Volvo");
+
         ObjectMapper om = new ObjectMapper();
 
         try (BufferedReader reader = new BufferedReader(new FileReader(INPUT));
@@ -71,18 +80,21 @@ public class First {
         //Object convert to JSON
         try {
             om.writeValue(new File(JSON), car);
+//            om.configure(DeserializationFeature.ACCEPT_EMPTY_ARRAY_AS_NULL_OBJECT,false);
+//            Car car1 = om.readValue(JSON,Car.class);
+//            System.out.println(car1.getMark());
         } catch (IOException e) {
             e.printStackTrace();
         }
-        //JSON to Objec
-
-        System.out.println(jsonToObject(JSON).getMark());
-
+        //JSON to Object
+        jsonToObject();
     }
 
-    public static Car jsonToObject(String json) {
-        Gson gson = new Gson();
-        Car car1 = gson.fromJson(json, Car.class);
-        return car1;
+    public static void jsonToObject() throws IOException {
+        System.out.println("JSON to Object");
+        ObjectMapper om = new ObjectMapper();
+        Car car1 = om.readValue(new File(JSON), Car.class);
+        System.out.println(car1.getMark());
+        System.out.println(car1.getPrice());
     }
 }
