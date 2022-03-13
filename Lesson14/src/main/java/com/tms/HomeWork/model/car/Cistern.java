@@ -1,18 +1,20 @@
 package com.tms.HomeWork.model.car;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import lombok.ToString;
 
 import java.io.Serializable;
 
 @ToString
-@Builder
+@NoArgsConstructor
 @Getter
+@Setter
 public class Cistern implements Serializable {
-    @JsonProperty("Тип топлива")
+    @JsonProperty("Type Fuel")
     private String typeFuel;
-    @JsonProperty("Обьем")
+    @JsonProperty("Volume")
     private double volume;
 }
