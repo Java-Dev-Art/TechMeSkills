@@ -1,6 +1,7 @@
 package com.tms.HomeWork.service;
 
 import com.tms.HomeWork.model.TaskFirst;
+import com.tms.HomeWork.model.TaskName;
 import com.tms.HomeWork.model.TaskSecond;
 
 public class Main {
@@ -10,5 +11,8 @@ public class Main {
 
         TaskSecond second = new TaskSecond();
         second.taskSet();
+
+        TaskName name = new TaskName();
+        name.setNames();
     }
 }
