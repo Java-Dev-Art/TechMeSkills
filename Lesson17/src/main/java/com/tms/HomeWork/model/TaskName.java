@@ -10,12 +10,11 @@ public class TaskName {
 
     public void setNames() {
         someTxt();
-        String s = scanner.nextLine();
+        String s;
         do {
-            while (names.size() < 10) {
-                setList(s);
-            }
-        } while (s.equalsIgnoreCase("MORIS"));
+            s = scanner.nextLine();//Почему то отрабатывает один раз, не понимаю
+            setList(s);
+        } while (s.equalsIgnoreCase("Moris"));
         System.out.println("List add finish");
     }
 
