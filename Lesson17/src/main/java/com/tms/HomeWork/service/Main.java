@@ -29,7 +29,7 @@ public class Main {
 
         CarInfo carInfo = new CarInfo();
         carInfo.printCarsNumber(cars, (Car c) ->
-                c.getYear() >= 2012 && Objects.equals(c.getNumber(), "") || Objects.isNull(c.getNumber()));
+                c.getYear() >= 2012 && !Objects.equals(c.getNumber(), "") && !Objects.equals(c.getNumber(), null));
         System.out.println("------------------");
 
     }
