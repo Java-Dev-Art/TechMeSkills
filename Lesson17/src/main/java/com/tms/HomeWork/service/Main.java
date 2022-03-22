@@ -1,6 +1,11 @@
 package com.tms.HomeWork.service;
 
-import com.tms.HomeWork.model.TaskName;
+
+import com.tms.HomeWork.model.t4.Car;
+import org.apache.commons.lang3.StringUtils;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,22 +15,24 @@ public class Main {
 //        TaskSecond second = new TaskSecond();
 //        second.taskSet();
 //
-        TaskName name = new TaskName();
-        name.setNames();
+//        TaskName name = new TaskName();
+//        name.setNames();
 
-//        List<Car> cars = Arrays.asList(
-//                new Car("AA1111BX", 2007),
-//                new Car("AK5555IT", 2010),
-//                new Car(null, 2012),
-//                new Car("", 2015),
-//                new Car("AI3838PP", 2017));
+        List<Car> cars = Arrays.asList(
+                new Car("AA1111BX", 2007),
+                new Car("AK5555IT", 2010),
+                new Car(null, 2012),
+                new Car("", 2015),
+                new Car("AI3838PP", 2017));
 
-//        System.out.println("Task # 4");
+        System.out.println("Task # 4");
+        cars.stream().filter(car -> StringUtils.isNotBlank(car.getNumber())).forEach(System.out::println);
 
 //        CarInfo carInfo = new CarInfo();
 //        carInfo.printCarsNumber(cars, (Car c) ->
 //                c.getYear() >= 2012 && !Objects.equals(c.getNumber(), "") && !Objects.equals(c.getNumber(), null));
 //        System.out.println("------------------");
+
 //        System.out.println("Task 5");
 //        List<Person> people = Arrays.asList(
 //                new Person("Artur","Markowski",'m',30),
