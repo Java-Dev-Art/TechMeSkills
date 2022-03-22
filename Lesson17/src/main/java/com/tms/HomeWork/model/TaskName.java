@@ -1,5 +1,7 @@
 package com.tms.HomeWork.model;
 
+import com.sun.xml.internal.ws.util.StringUtils;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -12,10 +14,11 @@ public class TaskName {
         someTxt();
         String s;
         do {
-            s = scanner.nextLine();//Почему то отрабатывает один раз, не понимаю
+            s = scanner.nextLine();
             setList(s);
-        } while (s.equalsIgnoreCase("Moris"));
+        } while (!s.equalsIgnoreCase("Moris"));
         System.out.println("List add finish");
+        printCapital(names);
     }
 
     private void setList(String s) {
@@ -24,5 +27,9 @@ public class TaskName {
 
     private void someTxt() {
         System.out.println("Please enter name :");
+    }
+
+    private void printCapital(List<String> list) {
+        list.stream().map(StringUtils::capitalize).forEach(System.out::println);
     }
 }
