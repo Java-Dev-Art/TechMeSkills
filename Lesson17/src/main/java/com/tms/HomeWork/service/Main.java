@@ -26,7 +26,7 @@ public class Main {
                 new Car("AI3838PP", 2017));
 
         System.out.println("Task # 4");
-        cars.stream().filter(car -> StringUtils.isNotBlank(car.getNumber())).forEach(System.out::println);
+        cars.stream().filter(car -> StringUtils.isNotBlank(car.getNumber()) && car.getYear() > 2012).forEach(System.out::println);
 
 //        CarInfo carInfo = new CarInfo();
 //        carInfo.printCarsNumber(cars, (Car c) ->
