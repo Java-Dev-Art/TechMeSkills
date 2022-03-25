@@ -14,6 +14,6 @@ public class Goods implements Comparable<Goods> {
 
     @Override
     public int compareTo(Goods o) {
-        return this.getId() - o.getId();
+        return this.getPrice() - o.getPrice();
     }
 }
