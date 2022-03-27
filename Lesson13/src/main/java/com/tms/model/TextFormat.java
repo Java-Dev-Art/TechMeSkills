@@ -17,11 +17,10 @@ public class TextFormat {
     }
 
     public boolean pollidrome(String text) {
-        String st = text.replaceAll(",", "");
+        String st = text.replaceAll("[,.!?:]", "");
         String[] massStr = st.split(" ");
         for (String str : massStr) {
             if (str.equalsIgnoreCase(String.valueOf(new StringBuilder(str).reverse()))) {
-//                System.out.println(str);
                 return true;
             }
         }
@@ -29,7 +28,7 @@ public class TextFormat {
     }
 
     public void checkText(String text) {
-        String[] mass = text.split("[.,]");
+        String[] mass = text.split("[.!?]");
         Pattern pattern = Pattern.compile("[a-zA-Zа-яА-Я]{3,5}");
 
         for (String str : mass) {
@@ -41,5 +40,11 @@ public class TextFormat {
                 System.out.println(str);
             }
         }
+    }
+
+    public int returnLength(String text) {
+        String st = text.replaceAll(",", "");
+        String[] massStr = st.split(" ");
+        return massStr.length;
     }
 }
