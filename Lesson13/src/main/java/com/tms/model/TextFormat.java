@@ -16,25 +16,35 @@ public class TextFormat {
         return text.replace(first, second);
     }
 
-    public void pollidrome(String text) {
-        String st = text.replaceAll(",", "");
+    public boolean pollidrome(String text) {
+        String st = text.replaceAll("[,.!?:]", "");
         String[] massStr = st.split(" ");
         for (String str : massStr) {
             if (str.equalsIgnoreCase(String.valueOf(new StringBuilder(str).reverse()))) {
-                System.out.println(str);
+                return true;
             }
         }
+        return false;
     }
 
     public void checkText(String text) {
-        String[] mass = text.split("[.,]");
-        Pattern pattern = Pattern.compile("\\s{3,5}");
+        String[] mass = text.split("[.!?]");
+        Pattern pattern = Pattern.compile("[a-zA-Zа-яА-Я]{3,5}");
 
         for (String str : mass) {
             Matcher matcher = pattern.matcher(str);
             if (matcher.find()) {
                 System.out.println(str);
             }
+            if (pollidrome(str)) {
+                System.out.println(str);
+            }
         }
+    }
+
+    public int returnLength(String text) {
+        String st = text.replaceAll(",", "");
+        String[] massStr = st.split(" ");
+        return massStr.length;
     }
 }
