@@ -28,7 +28,7 @@ public class TextFormat {
 
     public void checkText(String text) {
         String[] mass = text.split("[.,]");
-        Pattern pattern = Pattern.compile("\\s{3,5}");
+        Pattern pattern = Pattern.compile("[a-zA-Zа-яА-Я]{3,5}");
 
         for (String str : mass) {
             Matcher matcher = pattern.matcher(str);
