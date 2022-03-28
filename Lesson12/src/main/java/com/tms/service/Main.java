@@ -1,7 +1,9 @@
 package com.tms.service;
 
+import com.tms.model.Authorization;
 import com.tms.model.Car;
-import com.tms.model.CarException;
+import com.tms.model.WrongLoginException;
+import com.tms.model.WrongPasswordException;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,14 +13,20 @@ public class Main {
         Car car3 = new Car("BMV", 6363.23, 555);
         Car car4 = new Car("Porshe", 78963.23, 555);
 
+//        try {
+//            car.start();
+//            car1.start();
+//            car2.start();
+//            car3.start();
+//            car4.start();
+//        } catch (CarException e) {
+//            e.printStackTrace();
+//        }
         try {
-            car.start();
-            car1.start();
-            car2.start();
-            car3.start();
-            car4.start();
-        } catch (CarException e) {
+            Authorization.checkAuthorization("ArtyuertFtsdfgrtjklk", "123456789wertyuiopl", "123456789qwertyuiopl");
+        } catch (WrongPasswordException | WrongLoginException e) {
             e.printStackTrace();
         }
+
     }
 }
