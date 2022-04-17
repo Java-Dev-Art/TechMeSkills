@@ -13,7 +13,7 @@
 %>
 User : <%=name%><br>
 PASSWORD : <%=pass%>
-<a href="index.html">back to calculator</a>
+<a href="sum.html">back to calculator</a>
 
 </body>
 </html>

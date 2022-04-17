@@ -23,7 +23,7 @@
 
     <!--        <servlet>-->
     <!--            <servlet-name>hmServlet</servlet-name>-->
-    <!--            <servlet-class>com.tms.servlet.HMServlet</servlet-class>-->
+    <!--            <servlet-class>com.tms.servlet.SumServlet</servlet-class>-->
     <!--        </servlet>-->
 
     <!--        <servlet-mapping>-->

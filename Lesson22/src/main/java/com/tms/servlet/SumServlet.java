@@ -2,7 +2,6 @@ package com.tms.servlet;
 
 import com.tms.model.Calculator;
 
-import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,21 +10,14 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/welcome")
-public class HMServlet extends HttpServlet {
-    @Override
-    public void init(ServletConfig servletConfig) throws ServletException {
-        System.out.println("Init servlet");
-    }
-
+@WebServlet("/sum")
+public class SumServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        System.out.println("doGet");
+
         Calculator calculator = new Calculator();
         String first = req.getParameter("first");
         String second = req.getParameter("second");
-        System.out.println(first);
-        System.out.println(second);
         resp.setContentType("text/html");
         PrintWriter writer = resp.getWriter();
         try {
@@ -36,10 +28,5 @@ public class HMServlet extends HttpServlet {
         } finally {
             writer.close();
         }
-    }
-
-    @Override
-    public void destroy() {
-        System.out.println("Servlet was destroyed");
     }
 }

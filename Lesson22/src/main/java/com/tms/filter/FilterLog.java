@@ -8,9 +8,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class FilterLog implements Filter {
+    private FilterConfig config = null;
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         System.out.println("filter init");
+        this.config = filterConfig;
     }
 
     @Override
@@ -46,9 +48,8 @@ public class FilterLog implements Filter {
             pw.close();
         }
     }
-
     @Override
     public void destroy() {
-
+        this.config = null;
     }
 }
