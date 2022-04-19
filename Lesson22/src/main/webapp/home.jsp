@@ -10,10 +10,16 @@
 <%
     String name = (String) session.getAttribute("name");
     String pass = (String) session.getAttribute("pass");
+    int current = (Integer) session.getAttribute("current");
+    int total = (Integer) session.getAttribute("total");
 %>
 User : <%=name%><br>
-PASSWORD : <%=pass%>
-<a href="sum.html">back to calculator</a>
+PASSWORD : <%=pass%><br>
+TOTAL USERS : <%=total%><br>
+CURRENT USERS : <%=current%><br>
+<a href="/logout">LOG OUT</a><br>
+<a href="/log">LOG IN</a><
+<a href="index.html">back to calculator</a>
 
 </body>
 </html>

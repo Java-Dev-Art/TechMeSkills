@@ -21,24 +21,4 @@
     <!--        <listener-class>by.teachmeskills.listener.AppContextListener</listener-class>-->
     <!--    </listener>-->
 
-    <!--        <servlet>-->
-    <!--            <servlet-name>hmServlet</servlet-name>-->
-    <!--            <servlet-class>com.tms.servlet.SumServlet</servlet-class>-->
-    <!--        </servlet>-->
-
-    <!--        <servlet-mapping>-->
-    <!--            <servlet-name>hmServlet</servlet-name>-->
-    <!--            <url-pattern>/welcome</url-pattern>-->
-    <!--        </servlet-mapping>-->
-
-    <filter>
-        <filter-name>filter-log</filter-name>
-        <filter-class>com.tms.filter.FilterLog</filter-class>
-    </filter>
-
-    <filter-mapping>
-        <filter-name>filter-log</filter-name>
-        <url-pattern>/log</url-pattern>
-    </filter-mapping>
-
 </web-app>

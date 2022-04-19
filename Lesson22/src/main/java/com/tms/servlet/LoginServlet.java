@@ -1,7 +1,9 @@
 package com.tms.servlet;
 
+import com.tms.model.User;
+
 import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,12 +15,8 @@ import java.io.IOException;
 @WebServlet("/log")
 public class LoginServlet extends HttpServlet {
     @Override
-    public void init(ServletConfig config) throws ServletException {
-        System.out.println("init login servlet");
-    }
-
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        User user = new User();
         String userPass = req.getParameter("pass");
         String userName = req.getParameter("name");
         System.out.println(userName);
@@ -26,14 +24,18 @@ public class LoginServlet extends HttpServlet {
         HttpSession session = req.getSession();
         session.setAttribute("name", userName);
         session.setAttribute("pass", userPass);
-        RequestDispatcher dispatcher = req.getRequestDispatcher("home.jsp");
-        dispatcher.forward(req, resp);
+        ServletContext context = getServletContext();
+        int total = (Integer) context.getAttribute("total-users");
+        int current = (Integer) context.getAttribute("current-users");
+        session.setAttribute("total", total);
+        session.setAttribute("current", current);
+        RequestDispatcher dispatcher;
+        if (user.getName().equals(userName) && user.getPass().equals(userPass)) {
+            dispatcher = req.getRequestDispatcher("admin.html");
+            dispatcher.forward(req, resp);
+        } else {
+            dispatcher = req.getRequestDispatcher("home.jsp");
+            dispatcher.forward(req, resp);
+        }
     }
-
-    @Override
-    public void destroy() {
-        super.destroy();
-    }
-
-
 }
