@@ -15,8 +15,7 @@ public class NewsServlet extends HttpServlet {
         System.out.println("start get");
         resp.setContentType("text/html");
         String site = "https://www.zerkalo.io/";
-        resp.setStatus(resp.SC_ACCEPTED);
-        resp.setHeader("Location", site);
+
         resp.sendRedirect(site);
     }
 }
