@@ -8,12 +8,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/billets")
-public class BuyServlet extends HttpServlet {
+@WebServlet("/shop")
+public class ShopServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/billets.jsp");
+        RequestDispatcher dispatcher = getServletContext().getRequestDispatcher("/shop.jsp");
         dispatcher.forward(req, resp);
     }
-
 }
