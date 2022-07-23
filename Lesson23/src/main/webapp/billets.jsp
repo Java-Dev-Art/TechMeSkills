@@ -21,7 +21,7 @@
     <p>Chose your city and target</p>
 </div>
 <div class="container">
-    <form class="form-inline" action="/action_page.php">
+    <form class="form-inline" action="${pageContext.request.contextPath}/action_page.php">
         <label for="wf" class="mb-2 mr-sm-2">Where from :</label>
         <input type="text" class="form-control mb-2 mr-sm-2" id="wf" placeholder="where from" name="wf">
         <label for="where" class="mb-2 mr-sm-2">Where :</label>

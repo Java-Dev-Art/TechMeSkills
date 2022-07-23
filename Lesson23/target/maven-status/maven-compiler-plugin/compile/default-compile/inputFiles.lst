@@ -1,4 +1,8 @@
-/home/artur/TechmeSkills/TechMeSkills/Lesson23/src/main/java/com/tms/servlets/ShopServlet.java
-/home/artur/TechmeSkills/TechMeSkills/Lesson23/src/main/java/com/tms/servlets/NewsServlet.java
-/home/artur/TechmeSkills/TechMeSkills/Lesson23/src/main/java/com/tms/filters/FilterNews.java
-/home/artur/TechmeSkills/TechMeSkills/Lesson23/src/main/java/com/tms/servlets/BuyServlet.java
+/Users/arturmarkowski/Documents/tms/TechMeSkills/Lesson23/src/main/java/com/tms/servlets/LogIn.java
+/Users/arturmarkowski/Documents/tms/TechMeSkills/Lesson23/src/main/java/com/tms/filters/FilterNews.java
+/Users/arturmarkowski/Documents/tms/TechMeSkills/Lesson23/src/main/java/com/tms/model/User.java
+/Users/arturmarkowski/Documents/tms/TechMeSkills/Lesson23/src/main/java/com/tms/servlets/BuyServlet.java
+/Users/arturmarkowski/Documents/tms/TechMeSkills/Lesson23/src/main/java/com/tms/servlets/ShopServlet.java
+/Users/arturmarkowski/Documents/tms/TechMeSkills/Lesson23/src/main/java/com/tms/servlets/MyCV.java
+/Users/arturmarkowski/Documents/tms/TechMeSkills/Lesson23/src/main/java/com/tms/servlets/NewsServlet.java
+/Users/arturmarkowski/Documents/tms/TechMeSkills/Lesson23/src/main/java/com/tms/servlets/LogOut.java
