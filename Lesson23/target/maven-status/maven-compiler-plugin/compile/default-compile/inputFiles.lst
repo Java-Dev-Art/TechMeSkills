@@ -3,6 +3,8 @@
 /Users/arturmarkowski/Documents/tms/TechMeSkills/Lesson23/src/main/java/com/tms/model/User.java
 /Users/arturmarkowski/Documents/tms/TechMeSkills/Lesson23/src/main/java/com/tms/servlets/BuyServlet.java
 /Users/arturmarkowski/Documents/tms/TechMeSkills/Lesson23/src/main/java/com/tms/servlets/ShopServlet.java
+/Users/arturmarkowski/Documents/tms/TechMeSkills/Lesson23/src/main/java/com/tms/model/DBConectionMenager.java
 /Users/arturmarkowski/Documents/tms/TechMeSkills/Lesson23/src/main/java/com/tms/servlets/MyCV.java
 /Users/arturmarkowski/Documents/tms/TechMeSkills/Lesson23/src/main/java/com/tms/servlets/NewsServlet.java
+/Users/arturmarkowski/Documents/tms/TechMeSkills/Lesson23/src/main/java/com/tms/listener/AppContextListener.java
 /Users/arturmarkowski/Documents/tms/TechMeSkills/Lesson23/src/main/java/com/tms/servlets/LogOut.java
