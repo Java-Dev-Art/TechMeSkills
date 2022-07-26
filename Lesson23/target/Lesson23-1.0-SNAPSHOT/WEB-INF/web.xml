@@ -6,14 +6,14 @@
          version="4.0">
     <context-param>
         <param-name>DBUSER</param-name>
-        <param-value>aaa</param-value>
+        <param-value>root</param-value>
     </context-param>
     <context-param>
         <param-name>DBPWD</param-name>
-        <param-value>"1234"</param-value>
+        <param-value>112341321</param-value>
     </context-param>
     <context-param>
         <param-name>DBURL</param-name>
-        <param-value>jdbc:h2:eshop</param-value>
+        <param-value>jdbc:mysql://localhost:3306/DB_E_SHOP</param-value>
     </context-param>
 </web-app>

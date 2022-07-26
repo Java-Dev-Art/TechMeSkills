@@ -17,7 +17,7 @@ public class LogOut extends HttpServlet {
         HttpSession session = req.getSession(false);
         session.invalidate();
         writer.println("LOGGED OUT<br>");
-        writer.println("<a href=index.jsp>LOG IN</a>");
+        writer.println("<a href=login.jsp>LOG IN</a>");
         writer.close();
     }
 }

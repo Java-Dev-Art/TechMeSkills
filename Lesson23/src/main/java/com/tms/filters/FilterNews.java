@@ -19,7 +19,7 @@ public class FilterNews implements Filter {
         String password = servletRequest.getParameter("password");
         System.out.println(password + " " + "filter");
 //        PrintWriter writer = servletResponse.getWriter();
-//        RequestDispatcher requestDispatcher = servletRequest.getRequestDispatcher("/index.jsp");
+//        RequestDispatcher requestDispatcher = servletRequest.getRequestDispatcher("/login.jsp");
 //        if (!pass.equals(password)){
 //            servletResponse.setContentType("text/html");
 //            writer.println("<!DOCTYPE html>");
@@ -41,4 +41,5 @@ public class FilterNews implements Filter {
     public void destroy() {
 
     }
+
 }
