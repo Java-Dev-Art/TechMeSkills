@@ -35,29 +35,21 @@
                        required>
                 <div class="invalid-feedback">Password should be entered!</div>
             </div>
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn btn-primary" id="loginBtn" >Login</button>
         </form>
     </div>
 </div>
 <script>
-    // Disable form submissions if there are invalid fields
-    (function() {
-        'use strict';
-        window.addEventListener('load', function() {
-            // Get the forms we want to add validation styles to
-            var forms = document.getElementsByClassName('needs-validation');
-            // Loop over them and prevent submission
-            var validation = Array.prototype.filter.call(forms, function(form) {
-                form.addEventListener('submit', function(event) {
-                    if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-            });
-        }, false);
-    })();
+    document.getElementById("loginBtn").disabled=true;
+
+    document.getElementById("username").addEventListener('keyup',e =>{
+            document.getElementById("loginBtn").disabled = e.target.value === "";
+        }
+    );
+    document.getElementById("password").addEventListener('keyup',e =>{
+            document.getElementById("loginBtn").disabled = e.target.value === "";
+        }
+    );
 </script>
 </body>
 </html>
